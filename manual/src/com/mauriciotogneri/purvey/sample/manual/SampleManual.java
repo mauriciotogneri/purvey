@@ -1,11 +1,11 @@
 package com.mauriciotogneri.purvey.sample.manual;
 
-import com.mauriciotogneri.purvey.sample.app.Example;
+import com.mauriciotogneri.purvey.sample.app.Sample;
 import com.mauriciotogneri.purvey.sample.manual.providers.DefaultNetworkProvider;
 import com.mauriciotogneri.purvey.sample.manual.providers.DefaultTweeterProvider;
 import com.mauriciotogneri.purvey.sample.providers.RootObjectProvider;
 
-public class TestManual
+public class SampleManual
 {
 	public static void main(String[] args)
 	{
@@ -13,7 +13,7 @@ public class TestManual
 		objectProvider.addProvider(new DefaultNetworkProvider());
 		objectProvider.addProvider(new DefaultTweeterProvider(objectProvider));
 		
-		Example example = new Example();
-		example.run(objectProvider);
+		Sample sample = new Sample();
+		sample.run(objectProvider);
 	}
 }

@@ -5,7 +5,7 @@ import com.mauriciotogneri.purvey.sample.objects.Timeline;
 import com.mauriciotogneri.purvey.sample.objects.Tweeter;
 import com.mauriciotogneri.purvey.sample.providers.RootObjectProvider;
 
-public class Example
+public class Sample
 {
 	public void run(RootObjectProvider objectProvider)
 	{
