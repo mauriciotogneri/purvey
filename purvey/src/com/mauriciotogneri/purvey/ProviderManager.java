@@ -1,11 +1,11 @@
-package com.mauriciotogneri.dependency.purvey;
+package com.mauriciotogneri.purvey;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 import java.util.HashMap;
 import java.util.Map;
-import com.mauriciotogneri.dependency.purvey.Singleton.Type;
+import com.mauriciotogneri.purvey.Singleton.Type;
 
 public class ProviderManager implements InvocationHandler
 {

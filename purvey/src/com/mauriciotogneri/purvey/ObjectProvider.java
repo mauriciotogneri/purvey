@@ -1,4 +1,4 @@
-package com.mauriciotogneri.dependency.purvey;
+package com.mauriciotogneri.purvey;
 
 public class ObjectProvider<T>
 {

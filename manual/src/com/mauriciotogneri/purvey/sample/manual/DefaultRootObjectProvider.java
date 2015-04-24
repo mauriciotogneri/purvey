@@ -1,6 +1,6 @@
 package com.mauriciotogneri.purvey.sample.manual;
 
-import com.mauriciotogneri.dependency.purvey.ObjectProvider;
+import com.mauriciotogneri.purvey.ObjectProvider;
 import com.mauriciotogneri.purvey.sample.objects.HttpSender;
 import com.mauriciotogneri.purvey.sample.objects.Timeline;
 import com.mauriciotogneri.purvey.sample.objects.Tweeter;

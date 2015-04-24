@@ -1,4 +1,4 @@
-package com.mauriciotogneri.dependency.purvey;
+package com.mauriciotogneri.purvey;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

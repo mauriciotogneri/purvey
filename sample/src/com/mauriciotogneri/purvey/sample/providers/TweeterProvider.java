@@ -1,6 +1,6 @@
 package com.mauriciotogneri.purvey.sample.providers;
 
-import com.mauriciotogneri.dependency.purvey.Singleton;
+import com.mauriciotogneri.purvey.Singleton;
 import com.mauriciotogneri.purvey.sample.objects.Timeline;
 import com.mauriciotogneri.purvey.sample.objects.Tweeter;
 import com.mauriciotogneri.purvey.sample.objects.TweeterApi;
