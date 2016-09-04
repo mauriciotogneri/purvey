@@ -10,11 +10,11 @@ public class Sample
 {
     public void run(RootObjectProvider objectProvider)
     {
-        Tweeter tweeter = objectProvider.getTweeter("Max");
+        Tweeter tweeter = objectProvider.tweeter("Max");
         tweeter.tweet("This_is_a_message!");
 
-        Timeline timeline = objectProvider.getTimeline("Max");
-        List<String> messages = timeline.get();
+        Timeline timeline = objectProvider.timeline("Max");
+        List<String> messages = timeline.list();
         System.out.println(messages);
     }
 }

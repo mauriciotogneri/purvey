@@ -13,8 +13,8 @@ public class Timeline
         this.api = api;
     }
 
-    public List<String> get()
+    public List<String> list()
     {
-        return api.get(user);
+        return api.list(user);
     }
 }

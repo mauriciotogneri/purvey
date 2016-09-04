@@ -15,20 +15,20 @@ public class DefaultTweeterProvider extends ObjectProvider<RootObjectProvider> i
     }
 
     @Override
-    public TweeterApi getTweeterApi()
+    public TweeterApi tweeterApi()
     {
-        return new TweeterApi(provider.getHttpSender());
+        return new TweeterApi(provider.httpSender());
     }
 
     @Override
-    public Tweeter getTweeter(String user)
+    public Tweeter tweeter(String user)
     {
-        return new Tweeter(user, provider.getTweeterApi());
+        return new Tweeter(user, provider.tweeterApi());
     }
 
     @Override
-    public Timeline getTimeline(String user)
+    public Timeline timeline(String user)
     {
-        return new Timeline(user, provider.getTweeterApi());
+        return new Timeline(user, provider.tweeterApi());
     }
 }

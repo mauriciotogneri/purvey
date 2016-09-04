@@ -7,7 +7,7 @@ import com.mauriciotogneri.purvey.sample.providers.NetworkProvider;
 public class DefaultNetworkProvider extends ObjectProvider<Void> implements NetworkProvider
 {
     @Override
-    public HttpSender getHttpSender()
+    public HttpSender httpSender()
     {
         return new HttpSender();
     }

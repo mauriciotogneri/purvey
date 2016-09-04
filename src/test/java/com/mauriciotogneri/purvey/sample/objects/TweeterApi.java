@@ -17,7 +17,7 @@ public class TweeterApi
         sender.send("http://demo3679198.mockable.io/post?user=" + user + "&message=" + message);
     }
 
-    public List<String> get(String user)
+    public List<String> list(String user)
     {
         List<String> result = new ArrayList<>();
 

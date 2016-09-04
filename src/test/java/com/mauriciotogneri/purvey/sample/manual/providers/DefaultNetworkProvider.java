@@ -9,7 +9,7 @@ public class DefaultNetworkProvider extends ObjectProvider<Void> implements Netw
     private HttpSender httpSender;
 
     @Override
-    public HttpSender getHttpSender()
+    public HttpSender httpSender()
     {
         return (httpSender == null) ? (httpSender = new HttpSender()) : httpSender;
     }

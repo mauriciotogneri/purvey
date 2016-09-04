@@ -8,9 +8,9 @@ import com.mauriciotogneri.purvey.sample.objects.TweeterApi;
 public interface TweeterProvider
 {
     @Singleton
-    TweeterApi getTweeterApi();
+    TweeterApi tweeterApi();
 
-    Tweeter getTweeter(String user);
+    Tweeter tweeter(String user);
 
-    Timeline getTimeline(String user);
+    Timeline timeline(String user);
 }

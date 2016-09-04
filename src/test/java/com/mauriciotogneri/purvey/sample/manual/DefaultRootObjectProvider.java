@@ -9,7 +9,7 @@ import com.mauriciotogneri.purvey.sample.providers.NetworkProvider;
 import com.mauriciotogneri.purvey.sample.providers.RootObjectProvider;
 import com.mauriciotogneri.purvey.sample.providers.TweeterProvider;
 
-public class DefaultRootObjectProvider implements RootObjectProvider
+class DefaultRootObjectProvider implements RootObjectProvider
 {
     private NetworkProvider networkProvider;
     private TweeterProvider tweeterProvider;
@@ -28,26 +28,26 @@ public class DefaultRootObjectProvider implements RootObjectProvider
     }
 
     @Override
-    public Tweeter getTweeter(String user)
+    public Tweeter tweeter(String user)
     {
-        return tweeterProvider.getTweeter(user);
+        return tweeterProvider.tweeter(user);
     }
 
     @Override
-    public TweeterApi getTweeterApi()
+    public TweeterApi tweeterApi()
     {
-        return tweeterProvider.getTweeterApi();
+        return tweeterProvider.tweeterApi();
     }
 
     @Override
-    public Timeline getTimeline(String user)
+    public Timeline timeline(String user)
     {
-        return tweeterProvider.getTimeline(user);
+        return tweeterProvider.timeline(user);
     }
 
     @Override
-    public HttpSender getHttpSender()
+    public HttpSender httpSender()
     {
-        return networkProvider.getHttpSender();
+        return networkProvider.httpSender();
     }
 }
