@@ -4,12 +4,12 @@ public class ObjectProvider<T>
 {
     protected final T provider;
 
-    public ObjectProvider(T provider)
+    protected ObjectProvider(T provider)
     {
         this.provider = provider;
     }
 
-    public ObjectProvider()
+    protected ObjectProvider()
     {
         this(null);
     }

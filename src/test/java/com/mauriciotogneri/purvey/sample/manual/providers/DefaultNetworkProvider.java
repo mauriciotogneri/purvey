@@ -11,6 +11,6 @@ public class DefaultNetworkProvider extends ObjectProvider<Void> implements Netw
     @Override
     public HttpSender getHttpSender()
     {
-        return (this.httpSender == null) ? (this.httpSender = new HttpSender()) : this.httpSender;
+        return (httpSender == null) ? (httpSender = new HttpSender()) : httpSender;
     }
 }

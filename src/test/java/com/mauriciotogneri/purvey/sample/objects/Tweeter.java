@@ -13,6 +13,6 @@ public class Tweeter
 
     public void tweet(String message)
     {
-        this.api.postTweet(this.user, message);
+        api.postTweet(user, message);
     }
 }

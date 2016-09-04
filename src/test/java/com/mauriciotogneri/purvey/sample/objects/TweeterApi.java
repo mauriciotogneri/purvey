@@ -14,14 +14,14 @@ public class TweeterApi
 
     public void postTweet(String user, String message)
     {
-        this.sender.send("http://demo3679198.mockable.io/post?user=" + user + "&message=" + message);
+        sender.send("http://demo3679198.mockable.io/post?user=" + user + "&message=" + message);
     }
 
     public List<String> get(String user)
     {
-        List<String> result = new ArrayList<String>();
+        List<String> result = new ArrayList<>();
 
-        String response = this.sender.send("http://demo3679198.mockable.io/get?user=" + user);
+        String response = sender.send("http://demo3679198.mockable.io/get?user=" + user);
 
         result.add(response);
 

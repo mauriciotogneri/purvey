@@ -45,7 +45,7 @@ public class ProviderManager implements InvocationHandler
     {
         synchronized (ProviderManager.class)
         {
-            Object provider = this.providers.get(method.getDeclaringClass().getName());
+            Object provider = providers.get(method.getDeclaringClass().getName());
 
             if (provider == null)
             {
@@ -54,20 +54,20 @@ public class ProviderManager implements InvocationHandler
 
                 for (Class<?> element : interfaces)
                 {
-                    this.providers.put(element.getName(), newProvider);
+                    providers.put(element.getName(), newProvider);
                 }
             }
             else
             {
                 Singleton singleton = method.getDeclaredAnnotation(Singleton.class);
 
-                if ((singleton != null) && (singleton.type() == Type.RETURN_TYPE) && this.returnTypeSingleton.containsKey(method.getReturnType()))
+                if ((singleton != null) && (singleton.type() == Type.RETURN_TYPE) && returnTypeSingleton.containsKey(method.getReturnType()))
                 {
-                    return this.returnTypeSingleton.get(method.getReturnType());
+                    return returnTypeSingleton.get(method.getReturnType());
                 }
-                else if ((singleton != null) && (singleton.type() == Type.METHOD) && this.methodsSingleton.containsKey(method))
+                else if ((singleton != null) && (singleton.type() == Type.METHOD) && methodsSingleton.containsKey(method))
                 {
-                    return this.methodsSingleton.get(method);
+                    return methodsSingleton.get(method);
                 }
                 else
                 {
@@ -77,11 +77,11 @@ public class ProviderManager implements InvocationHandler
                     {
                         if (singleton.type() == Type.RETURN_TYPE)
                         {
-                            this.returnTypeSingleton.put(method.getReturnType(), result);
+                            returnTypeSingleton.put(method.getReturnType(), result);
                         }
                         else if (singleton.type() == Type.METHOD)
                         {
-                            this.methodsSingleton.put(method, result);
+                            methodsSingleton.put(method, result);
                         }
                     }
 

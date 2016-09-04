@@ -15,6 +15,6 @@ public class Timeline
 
     public List<String> get()
     {
-        return this.api.get(this.user);
+        return api.get(user);
     }
 }

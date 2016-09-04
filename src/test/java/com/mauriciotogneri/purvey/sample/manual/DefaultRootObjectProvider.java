@@ -19,35 +19,35 @@ public class DefaultRootObjectProvider implements RootObjectProvider
     {
         if (provider instanceof NetworkProvider)
         {
-            this.networkProvider = (NetworkProvider) provider;
+            networkProvider = (NetworkProvider) provider;
         }
         else if (provider instanceof TweeterProvider)
         {
-            this.tweeterProvider = (TweeterProvider) provider;
+            tweeterProvider = (TweeterProvider) provider;
         }
     }
 
     @Override
     public Tweeter getTweeter(String user)
     {
-        return this.tweeterProvider.getTweeter(user);
+        return tweeterProvider.getTweeter(user);
     }
 
     @Override
     public TweeterApi getTweeterApi()
     {
-        return this.tweeterProvider.getTweeterApi();
+        return tweeterProvider.getTweeterApi();
     }
 
     @Override
     public Timeline getTimeline(String user)
     {
-        return this.tweeterProvider.getTimeline(user);
+        return tweeterProvider.getTimeline(user);
     }
 
     @Override
     public HttpSender getHttpSender()
     {
-        return this.networkProvider.getHttpSender();
+        return networkProvider.getHttpSender();
     }
 }

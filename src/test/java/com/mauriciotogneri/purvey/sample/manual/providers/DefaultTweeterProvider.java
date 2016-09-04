@@ -19,7 +19,7 @@ public class DefaultTweeterProvider extends ObjectProvider<RootObjectProvider> i
     @Override
     public TweeterApi getTweeterApi()
     {
-        return (this.tweeterApi == null) ? (this.tweeterApi = new TweeterApi(this.provider.getHttpSender())) : this.tweeterApi;
+        return (tweeterApi == null) ? (tweeterApi = new TweeterApi(provider.getHttpSender())) : tweeterApi;
     }
 
     @Override
