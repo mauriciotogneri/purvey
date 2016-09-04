@@ -1,2 +1,2 @@
 # Purvey
-A dependency injection system
+A dependency injection system for Java.
